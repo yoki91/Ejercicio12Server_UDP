@@ -29,7 +29,7 @@ public class Ejercicio12Server_UDP
         	    InetAddress IP=receivepacket.getAddress();
         	    int port=receivepacket.getPort();
         	    DatagramPacket sendpacket=new DatagramPacket(sendbuff,sendbuff.length,IP,port);
-        	    
+        	    socket.send(sendpacket);
         	}
         	else
         	{
